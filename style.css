@@ -1,0 +1,32 @@
+
+.juegoX{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(27, 24, 24);
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    
+    
+}
+.juego0{
+    margin-left: 25px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(27, 24, 24);
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    
+    
+}
+input{
+    width: 30px;
+    height: 25px;
+    outline: none;
+    border: none;
+}

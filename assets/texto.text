@@ -1,0 +1,49 @@
+Que significa API ?
+Las API son mecanismos que permiten a dos
+ componentes de software comunicarse entre 
+ sí mediante un conjunto de definiciones y protocolos.
+ 
+ Que es Fetch?
+ fetch() es un mecanismo que te permite realizar llamadas
+  AJAX (Asynchronous JavaScript y XML) simples con JavaScript. 
+  Asynchronous (asincrónico) significa que puedes usar fetch para 
+  realizar llamadas a una API externa sin tener que detener la ejecución
+   de otras instrucciones.
+
+Que es AJAX? 
+AJAX (de las siglas en Inglés Asynchronous JavaScript And XML ) 
+es una práctica de programación utilizada para construir páginas web
+ más complejas y dinámicas,utilizando una tecnología conocida como XMLHttpRequest.1
+   
+
+Que significa XMLHttpRequest? 
+XMLHttpRequest es un objeto JavaScript que fue diseñado por Microsoft
+ y adoptado por Mozilla, Apple y Google. Actualmente es un estándar de la W3C.
+  Proporciona una forma fácil de obtener información de una URL sin tener que
+   recargar la página completa.
+
+¿Fetch utiliza XMLHttpRequest?
+La API Fetch utiliza promesas en lugar de eventos para manejar respuestas 
+asincrónicas, se integra bien con los trabajadores del servicio y admite aspectos
+ avanzados de HTTP como CORS. Por estos motivos, la API Fetch se suele utilizar
+  en aplicaciones web modernas en lugar de XMLHttpRequest 
+
+El método fetch() lanza el proceso de solicitud de un recurso de la red.
+ Esto devuelve una promesa que resuelve al objeto Response que representa la respuesta
+  a la solicitud realizada
+
+   ¿Qué es el DOM?
+    El modelo de objeto de documento (DOM) 
+   es una interfaz de programación para los documentos HTML y XML.
+    Facilita una representación estructurada del documento y define de
+     qué manera los programas pueden acceder,
+    al fin de modificar, tanto su estructura, estilo y contenido
+
+Si necesitamos hacer peticiones en la red utilizando JavaScript lo que 
+necesitamos es la API fetch
+Fetch: Esta API nos permite hacer solicitudes a un servidor y procesar su 
+respuesta de una manera muy sencilla y eficiente sobre todo muy intuitiva
+Por ejemplo puedes utilizar la API para procesar los datos de un formulario
+para recoger datos por ejemplo de una base de datos o para cargar contenido
+dinámico en la pagina web ademas la API es combatible con promesas es decir 
+que podemos trabajar haciendo peticiones asincrónos
