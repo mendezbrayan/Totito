@@ -12,45 +12,46 @@
 
 <body>
   <div class="d-flex justify-content-center mt-5 mb-5">
-    <div class="juegoX"><span>Jugador X</span>
-      <input  class="ptnX" readonly >
- </div>
- <div class="juego0">
-  <span>Jugador 0</span>
-  <input class="ptn0" readonly>
- </div>
+    <div class="juegoX"><span>Jugador <img src="./assets/img/x.png" width="30px" alt=""></span>
+      <input class="ptnX" readonly>
+    </div>
+    <div class="juego0">
+      <span>Jugador <img src="./assets/img/o.png" width="32px" alt=""></span>
+      <input class="ptn0" readonly>
+    </div>
 
   </div>
 
 
 
 
-  <div id="conteiner" class="conteiner text-center fs-1">
+  <div id="conteiner" class="conteiner text-center d-flex justify-content-center fs-1">
+    <div style="width: 400px;">
 
+      <div id="uno" class="row border-bottom" style="min-height: 100px;">
+        <div id="0" class="col-4 bg-end border-end accion fila1 diagonal1"></div>
+        <div id="1" class="col-4 bg-end border-end accion fila2"></div>
+        <div id="2" class="col-4 bg-end  accion fila3 diagonal2"></div>
 
-    <div id="uno" class="row bg-primary border-bottom" style="min-height: 100px;">
-      <div id="0" class="col-4 bg-end border-end accion fila1 diagonal1"></div>
-      <div id="1" class="col-4 bg-end border-end accion fila2"></div>
-      <div id="2" class="col-4 bg-end border-end accion fila3 diagonal2"></div>
+      </div>
+      <div class="row  border-bottom" style="min-height: 100px;">
+        <div id="3" class="col-4 bg-end border-end accion1 fila1"></div>
+        <div id="4" class="col-4 bg-end border-end accion1 fila2 diagonal1 diagonal2"></div>
+        <div id="5" class="col-4 bg-end  accion1 fila3"></div>
+
+      </div>
+      <div class="row" style="min-height: 100px;">
+        <div id="6" class="col-4 bg-end border-end accion2 fila1 diagonal2"></div>
+        <div id="7" class="col-4 bg-end border-end accion2 fila2"></div>
+        <div id="8" class="col-4   accion2 fila3 diagonal1"></div>
+
+      </div>
+      <button id="reiniciar" class="btn btn-danger">Reiniciar</button>
 
     </div>
-    <div class="row bg-primary border-bottom" style="min-height: 100px;">
-      <div id="3" class="col-4 bg-end border-end accion1 fila1"></div>
-      <div id="4" class="col-4 bg-end border-end accion1 fila2 diagonal1 diagonal2"></div>
-      <div id="5" class="col-4 bg-end border-end accion1 fila3"></div>
-
-    </div>
-    <div class="row bg-primary border-bottom" style="min-height: 100px;">
-      <div id="6" class="col-4 bg-end border-end accion2 fila1 diagonal2"></div>
-      <div id="7" class="col-4 bg-end border-end accion2 fila2"></div>
-      <div id="8" class="col-4 bg-end border-end accion2 fila3 diagonal1"></div>
-
-    </div>
-    <button id="reiniciar" class="btn btn-danger">Reiniciar</button>
-   
   </div>
 
   <script src="./totito.js"></script>
 </body>
 
-</html>  
+</html>

@@ -16,75 +16,50 @@ let reiniciar = document.querySelector('#reiniciar')
 let contadorX = 0;
 let contador0 = 0;
 
-const row1 = () => {
-    accion.forEach((color) => {
-        color.classList.add('bg-danger')
 
-
-    })
-}
 
 const validarJugador = () => {
     if ((arreglo[0] != null && arreglo[1] != null)
         && (arreglo[1] == arreglo[2])
         && (arreglo[1] == arreglo[2])) {
-        row1()
         ganador()
     }
     else if (
         (arreglo[3] != null && arreglo[4] != null)
         && (arreglo[3] == arreglo[4])
         && (arreglo[4] == arreglo[5])) {
-        
-        accion1.forEach((color) => {
-            color.classList.add('bg-danger')
-        })
         ganador()
     }
 
     else if ((arreglo[6] != null && arreglo[7] != null)
         && (arreglo[6] == arreglo[7])
         && (arreglo[7] == arreglo[8])) {
-        accion2.forEach((color) => {
-            color.classList.add('bg-danger')
-        })
+   
         ganador()
 
     } else if ((arreglo[0] != null && arreglo[3] != null)
         && (arreglo[0] == arreglo[3])
         && (arreglo[3] == arreglo[6])) {
-        fila1.forEach((color) => {
-            color.classList.add('bg-danger')
-        })
+      
         ganador()
     } else if ((arreglo[1] != null && arreglo[4] != null)
         && (arreglo[1] == arreglo[4])
         && (arreglo[4] == arreglo[7])) {
-        fila2.forEach((color) => {
-            color.classList.add('bg-danger')
-        })
+
         ganador()
     } else if ((arreglo[2] != null && arreglo[5] != null)
         && (arreglo[2] == arreglo[5])
         && (arreglo[5] == arreglo[8])) {
-        fila3.forEach((color) => {
-            color.classList.add('bg-danger')
-        })
+
         ganador()
     } else if ((arreglo[0] != null && arreglo[4] != null)
         && (arreglo[0] == arreglo[4])
         && (arreglo[4] == arreglo[8])) {
-        diagonal1.forEach((color) => {
-            console.log(contador0)
-            color.classList.add('bg-danger')
-        })
+
         ganador()
     } else if ((arreglo[2] != null && arreglo[4] != null)
         && (arreglo[2] == arreglo[4])
         && (arreglo[4] == arreglo[6])) {
-        diagonal2.forEach((color) => {
-            color.classList.add('bg-danger')
-        })
         ganador()
     }
 
@@ -113,30 +88,30 @@ const bloquearCasilla = (coordenada) => {
 const marcar = (celda) => {
 
     let isBlock = bloquearCasilla(celda.target.id)
-    
+
     if (isBlock) {
         alert('no')
 
     }
-     
+
     else {
         if (flag) {
-            
+
             celda.target.innerText = "X"
             arreglo[celda.target.id] = 'X'
             flag = !flag
 
         } else {
-            celda.target.innerText = '0'
-            arreglo[celda.target.id] = '0'
+            celda.target.innerText = 'O'
+            arreglo[celda.target.id] = 'O'
             flag = !flag
 
 
         }
-        
+
     }
     validarJugador()
-    
+
 
 
 }
@@ -148,7 +123,6 @@ const juegoNuevo = () => {
         flag = true;
         arreglo = [null, null, null, null, null, null, null, null, null]
 
-        celda.classList.replace('bg-danger', 'bg-primary')
     })
 
 
@@ -156,11 +130,11 @@ const juegoNuevo = () => {
 
 const ganador = () => {
     if (flag == false) {
-        
+
         alert('Jugador X Gano')
         contadorX = contadorX + 1
         pntX.value = contadorX
-        
+
         juegoNuevo()
 
     } else {
@@ -169,12 +143,12 @@ const ganador = () => {
         pnt0.value = contador0
         juegoNuevo()
     }
-    if(contadorX == '2' &&  contador0 == '2'){
+    if (contadorX == '5' && contador0 == '5') {
         alert('es un empate')
-    }else if(contadorX == '3'){
-        alert('Gano X por 3 puntos')
-    }else if (contador0 == '3'){
-        alert('ganno 0 por 3 puntos')
+    } else if (contadorX >= '5') {
+        alert('Gano X por 5 puntos')
+    } else if (contador0 >= '5') {
+        alert('ganno 0 por 5 puntos')
     }
 
 
@@ -187,7 +161,6 @@ celdas.forEach((celda) => {
         celda.innerText = ''
         flag = true;
         arreglo = [null, null, null, null, null, null, null, null, null]
-        celda.classList.replace('bg-danger', 'bg-primary')
         contador0 = 0;
         contadorX = 0;
         pnt0.value = ''
